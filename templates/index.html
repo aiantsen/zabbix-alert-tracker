@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zabbix: Index</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" type="text/css">
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-dark">
+        <div class="container">
+            <span class="navbar-text mx-auto trigger-header">
+                Zabbix API Interface
+            </span>
+        </div>
+    </nav>
+    <div class="content container">
+        <form method="POST" class="mt-3">
+            <div class="form-group">
+                <label for="server">Server:</label>
+                <input type="text" class="form-control" name="server" id="server" required>
+            </div>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" name="username" id="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" name="password" id="password" required>
+            </div>
+            <div class="form-group">
+                <label for="hostid">HostID:</label>
+                <input type="text" class="form-control" name="hostid" id="hostid" required>
+            </div>
+            {% if error %}
+            <h5 class="error-header"><span>Request error: {{ error }}</span></h5>
+            {% endif %}
+            <button type="submit" class="btn">Get alert recipients</button>
+        </form>
+    </div>
+</body>
+</html>
