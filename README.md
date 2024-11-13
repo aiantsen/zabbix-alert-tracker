@@ -2,7 +2,7 @@
 
 ## Overview
 
-Alert Tracker is a demonstration project showing how to obtain alert recipients from the Zabbix API for triggers associated with a selected host using the [zabbix_utils](https://github.com/zabbix/python-zabbix-utils) library.
+Alert Tracker is a demonstration project showing how to obtain alert recipients from the Zabbix API for triggers associated with a selected host using the [zabbix_utils](https://github.com/zabbix/python-zabbix-utils) library. This project is a part of the [article](https://blog.zabbix.com/python-zabbix-utils-alert-tracker-tool/29010/) on Zabbix Blog.
 
 ## Requirements
 
